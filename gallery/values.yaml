@@ -21,15 +21,15 @@ ingress:
     certmanager.k8s.io/cluster-issuer: letsencrypt-prod
   path: /
   hosts:
-    - pictures.achappaz.org
+    - example.domain
   tls: 
-   - secretName: pictures-tls
+   - secretName: example-tls
      hosts:
-       - pictures.achappaz.org
+       - example.domain
 
-enableNFS: true
-pvcStorage: 1Mi
-pvStorage: 1Mi
-server:
-  address: 192.168.1.17
-  path: /mnt/media/Pictures/Portraits/brut/
+enableNFS: false
+#pvcStorage: 1Mi
+#pvStorage: 1Mi
+#server:
+#  address: 192.168.X.X
+#  path: /exported/path
