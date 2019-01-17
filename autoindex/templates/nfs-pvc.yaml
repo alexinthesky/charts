@@ -1,0 +1,18 @@
+{{- if .Values.enableNFS }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ .Release.Name }}-pvc
+  labels:
+    app.kubernetes.io/name: {{ include "autoindex.name" . }}
+    helm.sh/chart: {{ include "autoindex.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: ""
+  resources:
+    requests:
+      storage: {{ .Values.pvcStorage }}
+{{- end }}

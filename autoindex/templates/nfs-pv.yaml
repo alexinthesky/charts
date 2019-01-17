@@ -1,0 +1,19 @@
+{{- if .Values.enableNFS }}
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{ .Release.Name }}-pv
+  labels:
+    app.kubernetes.io/name: {{ include "autoindex.name" . }}
+    helm.sh/chart: {{ include "autoindex.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  capacity:
+    storage: {{ .Values.pvStorage }}
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: {{ .Values.server.address }}
+    path: {{ .Values.server.path }}
+{{- end }}

@@ -1,13 +1,23 @@
 apiVersion: v1
 entries:
+  autoindex:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-01-17T10:34:29.358231411Z
+    description: A Helm chart for simple image autoindex
+    digest: e13e9b24637d939e4360320b38565ee575f5343b57e58f37cdd455a27f6415ed
+    name: autoindex
+    urls:
+    - https://alexinthesky.github.io/charts/autoindex-0.1.0.tgz
+    version: 0.1.0
   gallery:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-16T20:46:38.530329301Z
+    created: 2019-01-17T10:34:29.358722438Z
     description: A Helm chart for simple image gallery
     digest: 9f6d2ebda56da68b9bd761d72e4aea77e6daf19bbcb214b14dc0ac40c51c0fea
     name: gallery
     urls:
     - https://alexinthesky.github.io/charts/gallery-0.1.0.tgz
     version: 0.1.0
-generated: 2019-01-16T20:46:38.529963459Z
+generated: 2019-01-17T10:34:29.357647051Z
