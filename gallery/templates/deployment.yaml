@@ -28,11 +28,12 @@ spec:
               containerPort: 80
               protocol: TCP
           livenessProbe:
+            initialDelaySeconds: {{ .Values.initialDelay }}
             httpGet:
               path: /
               port: http
           readinessProbe:
-            initialDelaySeconds: 500
+            initialDelaySeconds: {{ .Values.initialDelay }}
             httpGet:
               path: /
               port: http

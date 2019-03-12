@@ -8,7 +8,7 @@ image:
   repository: docwhat/image-gallery
   tag: latest
   pullPolicy: IfNotPresent
-
+  initialDelay: 100
 service:
   type: ClusterIP
   port: 80

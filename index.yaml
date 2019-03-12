@@ -12,12 +12,12 @@ entries:
     version: 0.1.0
   gallery:
   - apiVersion: v1
-    appVersion: "1.0"
+    appVersion: "1.2"
     created: 2019-01-17T10:34:29.358722438Z
     description: A Helm chart for simple image gallery
     digest: 9f6d2ebda56da68b9bd761d72e4aea77e6daf19bbcb214b14dc0ac40c51c0fea
     name: gallery
     urls:
-    - https://alexinthesky.github.io/charts/gallery-0.1.1.tgz
-    version: 0.1.1
+    - https://alexinthesky.github.io/charts/gallery-0.1.2.tgz
+    version: 0.1.2
 generated: 2019-01-17T10:34:29.357647051Z
