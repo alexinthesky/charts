@@ -42,11 +42,24 @@ spec:
             # name must match the volume name below
             - name: nfs
               mountPath: "/images"
+{{  end  }}
+{{- if .Values.persistence.enabled }}
+            - name: storage
+              mountPath: "/usr/share/nginx"
+{{  end  }}
       volumes:
+{{- if .Values.enableNFS }}
       - name: nfs
         persistentVolumeClaim:
           claimName: {{ .Release.Name }}-pvc
-{{- end }}
+{{  end  }}
+      - name: storage
+      {{- if .Values.persistence.enabled }}
+        persistentVolumeClaim:
+          claimName: {{ .Release.Name }}-sc-pvc
+      {{- else }}
+        emptyDir: {}
+      {{- end }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}

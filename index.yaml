@@ -18,6 +18,6 @@ entries:
     digest: 9f6d2ebda56da68b9bd761d72e4aea77e6daf19bbcb214b14dc0ac40c51c0fea
     name: gallery
     urls:
-    - https://alexinthesky.github.io/charts/gallery-0.1.2.tgz
-    version: 0.1.2
+    - https://alexinthesky.github.io/charts/gallery-0.1.3.tgz
+    version: 0.1.3
 generated: 2019-01-17T10:34:29.357647051Z

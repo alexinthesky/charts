@@ -26,7 +26,12 @@ ingress:
    - secretName: example-tls
      hosts:
        - example.domain
-
+persistence:
+  enabled: true
+  # storageClassName: default
+  accessModes:
+    - ReadWriteOnce
+  size: 10Gi
 enableNFS: false
 #pvcStorage: 1Mi
 #pvStorage: 1Mi
